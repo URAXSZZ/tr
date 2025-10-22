@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background-image: url('arka.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 1s ease;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #bbbfbd, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            font-size: 1.2rem;
+            margin: 8px 0;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        ul li:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+        ul li ul li {
+            font-size: 1rem;
+            padding-left: 20px;
+            background: none;
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Türkiyenin zenginliği hakkında Bilgiler</h1>
+        <h3>Yemek türleri:</h3>
+        <ul>
+            <li>Çorba
+                <ul>
+                    <li>Ayran çorbası</li>
+                    <li>Tarhana çorbası</li>
+                    <li>Mercimek çorbası</li>
+                    <li>İşkembe çorbası</li>
+                    <li>Şehriye çorbası</li>
+                </ul>
+
+             <li>yemek, yiyecek v.b:
+             <ul>
+                <li>Sarma</li>
+                <li>çiğköfte</li>
+                <li>kebap</li>
+             </ul>
+
+                
+            </li>
+            <li>Tatlılar
+                <ul>
+                    <li>Baklava</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Sanatlarımız:</h3>
+        <ul>
+            <li>Ebru sanatı</li>
+            <li>Hat sanatı</li>
+        </ul>
+    </div>
+    <script>
+        const resimler = ['arka.jpeg', 'Türkiye.jpeg', 'istanbul.jpeg', 'kapadokya.jpeg'];
+        let index = 0;
+        setInterval(() => {
+            index++;
+            if(index >= resimler.length) index = 0;
+            document.body.style.backgroundImage = `url('${resimler[index]}')`;
+        }, 5000);
+    </script>
+</body>
+</html>
